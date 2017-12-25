@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDBWithDotNet.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,11 @@ namespace MongoDBWithDotNet.Controllers
 {
     public class HomeController : Controller
     {
+        MongoContext ctx = new MongoContext();
         public ActionResult Index()
         {
+            
+            var emp= ctx.GetEmployeeDepartment("Mohit");
             return View();
         }
 
