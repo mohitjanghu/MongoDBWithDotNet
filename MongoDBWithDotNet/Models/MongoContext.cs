@@ -12,7 +12,7 @@ namespace MongoDBWithDotNet.Models
         private IMongoDatabase db;
         public MongoContext()
         {
-            MongoClient server = new MongoClient("mongodb://liam:liam123@ds151707.mlab.com:51707/learn");
+            MongoClient server = new MongoClient();
             db = server.GetDatabase("learn");
             //db.GetCollection<Designations>("Designations").InsertMany(
             //    new Designations[]
